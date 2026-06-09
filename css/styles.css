@@ -209,7 +209,7 @@ p {
         align-items: center;
         border-right: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        padding: 10px 25px;
+        padding: 10px 40px;
         background-color: #000000;
     }
 
@@ -313,6 +313,9 @@ p {
 }
 
 @media (max-width: 768px) {
+    .sidebar-header {
+        padding: 10px 20px;
+    }
     .hero {
         padding: 20px 24px;
     }
