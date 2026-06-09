@@ -25,7 +25,7 @@
     <meta property="og:title" content="a.l.arch.studio | Annalisa Lamaddalena Architetto">
     <meta property="og:description"
         content="Studio di architettura specializzato in progettazione architettonica, ristrutturazioni e riqualificazioni. Servizi di project management e consulenze specialistiche a Crema.">
-    <meta property="og:image" content="https://www.alarchstudio.it/assets/og-image.jpg">
+    <meta property="og:image" content="https://www.alarchstudio.it/assets/favicon/og-image.jpg">
 
     <!-- Additional SEO Tags -->
     <meta name="robots" content="index, follow">
@@ -37,9 +37,48 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.alarchstudio.it/">
 
+    <!-- Google Fonts & Style libraries -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- JSON-LD Structured Data (Organization / ProfessionalService) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "a.l.arch.studio",
+      "image": "https://www.alarchstudio.it/assets/logo/logo_senza_sfondo.png",
+      "@id": "https://www.alarchstudio.it/#organization",
+      "url": "https://www.alarchstudio.it/",
+      "telephone": "+393409284682",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via Matteotti 29",
+        "addressLocality": "Crema",
+        "postalCode": "26013",
+        "addressRegion": "CR",
+        "addressCountry": "IT"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.instagram.com/alarchstudio/"
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -48,397 +87,42 @@
         <div class="loader"></div>
     </div>
 
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
-    <!-- Logo fisso -->
-    <div class="fixed-logo">
-        <a href="#home">
-            <img src="assets/Logo Senza Sfondo.png" alt="ARCHISTUDIO Logo">
-        </a>
-    </div>
-
-    <!-- Floating Contact -->
-    <div class="floating-contact">
-        <div class="contact-item" style="--i:1">
-            <i class="fas fa-phone"></i>
-            <a href="tel:+393409284682">+39 3409 284682</a>
+    <!-- Sidebar/Left Navigation -->
+    <header class="sidebar-header">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="assets/logo/logo_senza_sfondo.png" alt="a.l.arch.studio Logo" class="logo-img">
+            </a>
         </div>
-        <div class="contact-item" style="--i:2">
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:a.lamaddalena@alarchstudio.org">a.lamaddalena@alarchstudio.org</a>
-        </div>
-    </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Apri Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="sidebar-nav" id="sidebarNav">
+            <ul>
+                <li><a href="index.html" class="sidebar-link active">HOME</a></li>
+                <li><a href="about.html" class="sidebar-link">ABOUT</a></li>
+                <li><a href="gallery.html" class="sidebar-link">GALLERY</a></li>
+                <li><a href="dove-siamo.html" class="sidebar-link">DOVE SIAMO</a></li>
+                <li><a href="press.html" class="sidebar-link">PRESS</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Navigation Dots -->
-    <div class="section-nav">
-        <div class="nav-dot active" data-section="home"></div>
-        <div class="nav-dot" data-section="about"></div>
-        <div class="nav-dot" data-section="services"></div>
-        <div class="nav-dot" data-section="contact"></div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <img src="" alt="Modern Architecture" class="hero-bg">
-        <!-- Costellazioni -->
-        <!-- <div id="particles-js"></div> -->
-        <div class="hero-content">
-
-            <h1 class="impact-text">a.l.arch.studio</h1>
-            <h2 class="hero-logo impact-text"><span>ANNALISA LAMADDALENA ARCHITETTO</span></h2>
-            <p>Partiamo sempre da un concetto fondamentale: la sostenibilità di un lavoro.<br />
-                Un’idea, un progetto, una nuova casa, un cantiere devono essere sostenibili emotivamente, economicamente
-                e nell’utilizzo di risorse.
-            </p>
-        </div>
-        <a href="#about" class="scroll-down"></a>
-    </section>
-
-    <!-- About Section -->
-    <section class="section about" id="about">
-
-        <div class="decor-circle circle-1"></div>
-        <div class="container">
-            <img src="assets/BlackWindow.png" alt="Modern Architecture" class="hero-bg">
-            <h2 class="section-title impact-text fade-up">About</h2>
-            <div class="about-content">
-                <div class="about-text fade-left">
-                    <h3 class="impact-text">Annalisa Lamaddalena</h3>
-                    <p>Laureata al Politecnico di Bari nel 2002, formatasi nello studio di famiglia, si trasferisce a
-                        Milano e
-                        dal 2004 assume la direzione tecnica di grandi opere, tra cui l’ampliamento dell’Ospedale San
-                        Raffaele.<br />
-                        Collabora con importanti General Contractor del territorio e si occupa di coordinamento e
-                        gestione chiavi in mano
-                        di lavori nell’ambito del food, della moda oltre che residenze private.<br />
-                        Realizza e firma progetti per numerose ristrutturazioni, con grande attenzione al contesto, alla
-                        sostenibilità degli interventi
-                        ed agli importanti spunti conservativi che rappresentano per lei sempre approccio fondamentale
-                        al lavoro.
-                    </p>
-                </div>
-                <div class="about-img fade-right">
-                    <div class="carousel">
-                        <div class="carousel-item active">
-                            <img src="assets/Profilo.jpg" alt="Annalisa Lamaddalena" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image1.jpg" alt="Studio Project 1" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image2.jpg" alt="Studio Project 2" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image3.jpg" alt="Studio Project 3" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image4.jpg" alt="Studio Project 4" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image5.jpg" alt="Studio Project 5" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image6.jpg" alt="Studio Project 6" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image7.jpg" alt="Studio Project 7" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image8.jpg" alt="Studio Project 8" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image9.jpg" alt="Studio Project 9" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image10.jpg" alt="Studio Project 10" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image11.jpg" alt="Studio Project 11" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image12.jpg" alt="Studio Project 12" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image13.jpg" alt="Studio Project 13" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image14.jpg" alt="Studio Project 14" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image15.jpg" alt="Studio Project 15" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image16.jpg" alt="Studio Project 16" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image17.jpg" alt="Studio Project 17" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image18.jpg" alt="Studio Project 18" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image19.jpg" alt="Studio Project 19" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image20.jpg" alt="Studio Project 20" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image21.jpg" alt="Studio Project 21" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image22.jpg" alt="Studio Project 22" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image23.jpg" alt="Studio Project 23" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image24.jpg" alt="Studio Project 24" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image25.jpg" alt="Studio Project 25" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image26.jpg" alt="Studio Project 26" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image27.jpg" alt="Studio Project 27" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image28.jpg" alt="Studio Project 28" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image29.jpg" alt="Studio Project 29" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image30.jpg" alt="Studio Project 30" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image31.jpg" alt="Studio Project 31" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image32.jpg" alt="Studio Project 32" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image33.jpg" alt="Studio Project 33" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image34.jpg" alt="Studio Project 34" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image35.jpg" alt="Studio Project 35" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image36.jpg" alt="Studio Project 36" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image37.jpg" alt="Studio Project 37" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image38.jpg" alt="Studio Project 38" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image39.jpg" alt="Studio Project 39" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image40.jpg" alt="Studio Project 40" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image41.jpg" alt="Studio Project 41" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image42.jpg" alt="Studio Project 42" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image43.jpg" alt="Studio Project 43" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image44.jpg" alt="Studio Project 44" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image45.jpg" alt="Studio Project 45" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image46.jpg" alt="Studio Project 46" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image47.jpg" alt="Studio Project 47" class="carousel-img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/image48.jpg" alt="Studio Project 48" class="carousel-img">
-                        </div>
-                    </div>
-                </div>
+    <!-- Home/Hero Section -->
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>a.l.arch.studio</h1>
+                <h2 class="hero-logo">ANNALISA LAMADDALENA ARCHITETTO</h2>
+                <p class="hero-manifesto">PROGETTARE SIGNIFICA TRASFORMARE UN'IDEA IN UN'OPERA REALIZZABILE. OGNI PROGETTO NASCE DALL'EQUILIBRIO TRA QUALITÀ ARCHITETTONICA, SOSTENIBILITÀ ECONOMICA E ATTENZIONE AL CONTESTO, ACCOMPAGNANDO IL CLIENTE DALLA PRIMA INTUIZIONE FINO ALLA COMPLETA REALIZZAZIONE DELL'INTERVENTO.</p>
             </div>
-        </div>
-
-    </section>
-
-    <!-- Services Section -->
-    <section class="section services" id="services">
-        <div class="decor-circle circle-2"></div>
-        <div class="container">
-            <h2 class="section-title impact-text fade-up">I NOSTRI SERVIZI</h2>
-            <div class="services-grid">
-                <div class="service-card fade-up" style="--delay: 0.1s">
-                    <h3 class="service-title impact-text">PROGETTAZIONE ARCHITETTONICA</h3>
-                    <p class="service-desc">Creiamo spazi unici, funzionali ed estetici, con un design che unisce
-                        innovazione e tradizione.</p>
-                </div>
-                <div class="service-card fade-up" style="--delay: 0.2s">
-                    <h3 class="service-title impact-text">PRATICHE EDILIZIE</h3>
-                    <p class="service-desc">Gestiamo tutte le pratiche edilizie con precisione e competenza,
-                        semplificando ogni fase burocratica.</p>
-                </div>
-                <div class="service-card fade-up" style="--delay: 0.3s">
-                    <h3 class="service-title impact-text">SICUREZZA</h3>
-                    <p class="service-desc">Garantiamo sicurezza in ogni progetto, rispettando le normative e tutelando
-                        persone e strutture.</p>
-                </div>
-                <div class="service-card fade-up" style="--delay: 0.4s">
-                    <h3 class="service-title impact-text">CATASTO</h3>
-                    <p class="service-desc">Offriamo servizi catastali completi: aggiornamenti, visure e pratiche per
-                        ogni esigenza.</p>
-                </div>
-                <div class="service-card fade-up" style="--delay: 0.5s">
-                    <h3 class="service-title impact-text">RISTRUTTURAZIONI E RIQUALIFICAZIONI</h3>
-                    <p class="service-desc">Trasformiamo spazi con ristrutturazioni su misura, migliorando estetica,
-                        funzionalità ed efficienza.</p>
-                </div>
-                <div class="service-card fade-up" style="--delay: 0.6s">
-                    <h3 class="service-title impact-text">PROJECT MANAGEMENT</h3>
-                    <p class="service-desc">Coordiniamo ogni fase del progetto, garantendo tempi, costi e qualità
-                        ottimali.</p>
-                </div>
-                <div class="service-card fade-up" style="--delay: 0.7s">
-                    <h3 class="service-title impact-text">CONSTRUCTION MANAGEMENT</h3>
-                    <p class="service-desc">Supervisioniamo l’intero processo costruttivo per garantire qualità,
-                        sicurezza e rispetto dei tempi.</p>
-                </div>
-                <div class="service-card fade-up" style="--delay: 0.8s">
-                    <h3 class="service-title impact-text">CONSULENZE SPECIALISTICHE</h3>
-                    <p class="service-desc">Offriamo consulenze tecniche personalizzate per risolvere ogni esigenza
-                        progettuale e normativa.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section contact" id="contact">
-        <div class="container">
-            <h2 class="section-title impact-text fade-up">CONTATTACI</h2>
-            <div class="contact-content">
-                <div class="contact-info fade-left">
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-info-text">
-                            <h4 class="impact-text">Sede</h4>
-                            <p>a.l.arch.studio – 29, via matteotti – 26013 CREMA - CR</p>
-                        </div>
-                    </div>
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-info-text">
-                            <h4 class="impact-text">Telefono</h4>
-                            <a href="tel:+390123456789">+39 3409 284682</a>
-                        </div>
-                    </div>
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-info-text">
-                            <h4 class="impact-text">E-Mail</h4>
-                            <a href="mailto:a.lamaddalena@alarchstudio.org">a.lamaddalena@alarchstudio.org</a>
-                        </div>
-                    </div>
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                            <i class="fab fa-instagram"></i>
-                        </div>
-                        <div class="contact-info-text">
-                            <h4 class="impact-text">Instragram</h4>
-                            <a href="https://www.instagram.com/alarchstudio/" target="_blank">@alarchstudio</a>
-                        </div>
-                    </div>
-                    <div class="map-container">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.338540764826!2d9.686039776698859!3d45.36216314024037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47813b0036bf22bd%3A0xdc29fcefa10f9bc5!2sa.l.arch%20studio!5e0!3m2!1sit!2sit!4v1742655201701!5m2!1sit!2sit"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-                <div class="contact-form-container fade-right">
-                    <form action="https://formsubmit.co/a.lamaddalena@alarchstudio.org" class="contact-form"
-                        id="contactForm" method="post">
-                        <input type="hidden" name="_template" value="table">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Nome e Cognome *" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email *" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" class="form-control" placeholder="Telefono" name="tel">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" name="message" placeholder="Il tuo messaggio"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <input type="checkbox" id="checkbox-privacy" required>
-                            <label for="checkbox-privacy">Accetto la <a href="privacy-policy.html" target="_blank"
-                                    style="color: #c8a45d; text-decoration: underline;">Privacy Policy e i Termini e
-                                    Condizioni</a>.</label>
-                        </div>
-                        <button type="submit" class="submit-btn form-submit">INVIA MESSAGGIO</button>
-                        <input type="hidden" name="_subject" value="Nuovo messaggio dal tuo sito web!">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="http://alarchstudio.it/confermaInvio.html">
-                    </form>
-
-                    <div class="privacy-button-container">
-                        <a href="privacy-policy.html" target="_blank" class="privacy-btn">
-                            <i class="fas fa-shield-alt"></i>
-                            Consulta la Privacy Policy e i Termini e Condizioni
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <a href="#home" class="footer-logo">a.l.arch.studio<br /><span>ANNALISA LAMADDALENA</span></a>
-                <div class="footer-social">
-                    <span><i class="fab fa-instagram"></i> @alarchstudio</span>
-                </div>
-            </div>
-            <div class="footer-nav">
-                <a href="#home">Home</a>
-                <a href="#about">Chi Siamo</a>
-                <a href="#services">Servizi</a>
-                <a href="#contact">Contatti</a>
-            </div>
-            <div class="footer-bottom">
-                <p>a.l.arch.studio - Annalisa Lamaddalena Architetto</p>
-            </div>
-        </div>
-    </footer>
+        </section>
+    </main>
 
     <!-- Scripts -->
     <script src="js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 </body>
 
 </html>

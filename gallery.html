@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon.ico">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+
+    <!-- SEO Meta Tags -->
+    <title>Gallery | a.l.arch.studio | Grandi Opere e Progetti</title>
+    <meta name="description" content="Galleria fotografica dei progetti e delle grandi opere dirette dall'architetto Annalisa Lamaddalena. San Raffaele Milano, Carrefour Limbiate e interior design.">
+    <link rel="canonical" href="https://www.alarchstudio.it/gallery.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.alarchstudio.it/gallery.html">
+    <meta property="og:title" content="Gallery | a.l.arch.studio | Annalisa Lamaddalena Architetto">
+    <meta property="og:description" content="Galleria fotografica delle grandi opere dirette e dei progetti di ristrutturazione. Sfoglia il portfolio dello studio.">
+    <meta property="og:image" content="https://www.alarchstudio.it/assets/direzione-tecnica/san_raffaele1.jpg">
+
+    <!-- JSON-LD Structured Data (ItemList / CreativeWork Portfolio) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Portfolio Opere e Progetti - Annalisa Lamaddalena Architetto",
+      "description": "Elenco delle opere e dei progetti diretti o realizzati dallo studio d'architettura.",
+      "url": "https://www.alarchstudio.it/gallery.html",
+      "numberOfItems": 2,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Direzione tecnica di grandi opere e project management",
+          "description": "Ampliamento dell'Ospedale San Raffaele DIBIT a Milano, Centro Commerciale Carrefour a Limbiate ed altre importanti realizzazioni."
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Progetti di architettura e interni",
+          "description": "Ristrutturazioni e interior design curati dall'architetto Annalisa Lamaddalena."
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts & Style libraries -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Loader -->
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Sidebar/Left Navigation -->
+    <header class="sidebar-header">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="assets/logo/logo_senza_sfondo.png" alt="a.l.arch.studio Logo" class="logo-img">
+            </a>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Apri Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="sidebar-nav" id="sidebarNav">
+            <ul>
+                <li><a href="index.html" class="sidebar-link">HOME</a></li>
+                <li><a href="about.html" class="sidebar-link">ABOUT</a></li>
+                <li><a href="gallery.html" class="sidebar-link active">GALLERY</a></li>
+                <li><a href="dove-siamo.html" class="sidebar-link">DOVE SIAMO</a></li>
+                <li><a href="press.html" class="sidebar-link">PRESS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section gallery" id="gallery">
+            <div class="container">
+                <h1 class="section-title">GALLERY</h1>
+                
+                <div class="gallery-tabs">
+                    <button class="gallery-tab-btn active" data-tab="direzione-tecnica">Direzione tecnica di grandi opere e project management</button>
+                    <button class="gallery-tab-btn" data-tab="progetti">Progetti</button>
+                </div>
+
+                <!-- Tab 1: Direzione Tecnica -->
+                <div class="gallery-tab-content active" id="tab-direzione-tecnica">
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-index="0" data-src="assets/direzione-tecnica/san_raffaele1.jpg" data-caption="Ampliamento Ospedale San Raffaele DIBIT - Milano (Parcheggio interrato multipiano)">
+                            <img src="assets/direzione-tecnica/san_raffaele1.jpg" alt="Ospedale San Raffaele 1" loading="lazy">
+                            <div class="gallery-item-overlay">
+                                <span>Ospedale San Raffaele</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-index="1" data-src="assets/direzione-tecnica/san_raffaele2.jpg" data-caption="Ampliamento Ospedale San Raffaele DIBIT - Milano (Residenza universitaria)">
+                            <img src="assets/direzione-tecnica/san_raffaele2.jpg" alt="Ospedale San Raffaele 2" loading="lazy">
+                            <div class="gallery-item-overlay">
+                                <span>Residenza Universitaria</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-index="2" data-src="assets/direzione-tecnica/san_raffaele3.jpg" data-caption="Ampliamento Ospedale San Raffaele DIBIT - Milano (Stazione metropolitana)">
+                            <img src="assets/direzione-tecnica/san_raffaele3.jpg" alt="Ospedale San Raffaele 3" loading="lazy">
+                            <div class="gallery-item-overlay">
+                                <span>Collegamento Metropolitana</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-index="3" data-src="assets/direzione-tecnica/limbiate1.png" data-caption="Centro Commerciale Carrefour - Limbiate (MB)">
+                            <img src="assets/direzione-tecnica/limbiate1.png" alt="Centro Commerciale Limbiate 1" loading="lazy">
+                            <div class="gallery-item-overlay">
+                                <span>Centro Commerciale Limbiate</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-index="4" data-src="assets/direzione-tecnica/limbiate2.png" data-caption="Interni Centro Commerciale Carrefour - Limbiate (MB)">
+                            <img src="assets/direzione-tecnica/limbiate2.png" alt="Centro Commerciale Limbiate 2" loading="lazy">
+                            <div class="gallery-item-overlay">
+                                <span>Interni Limbiate</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-index="5" data-src="assets/direzione-tecnica/limbiate3.png" data-caption="Esterni Centro Commerciale Carrefour - Limbiate (MB)">
+                            <img src="assets/direzione-tecnica/limbiate3.png" alt="Centro Commerciale Limbiate 3" loading="lazy">
+                            <div class="gallery-item-overlay">
+                                <span>Ingresso Limbiate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Progetti -->
+                <div class="gallery-tab-content" id="tab-progetti">
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-index="0" data-src="assets/progetti/image1.jpg"><img src="assets/progetti/image1.jpg" alt="Progetto 1" loading="lazy"></div>
+                        <div class="gallery-item" data-index="1" data-src="assets/progetti/image2.jpg"><img src="assets/progetti/image2.jpg" alt="Progetto 2" loading="lazy"></div>
+                        <div class="gallery-item" data-index="2" data-src="assets/progetti/image3.jpg"><img src="assets/progetti/image3.jpg" alt="Progetto 3" loading="lazy"></div>
+                        <div class="gallery-item" data-index="3" data-src="assets/progetti/image4.jpg"><img src="assets/progetti/image4.jpg" alt="Progetto 4" loading="lazy"></div>
+                        <div class="gallery-item" data-index="4" data-src="assets/progetti/image5.jpg"><img src="assets/progetti/image5.jpg" alt="Progetto 5" loading="lazy"></div>
+                        <div class="gallery-item" data-index="5" data-src="assets/progetti/image6.jpg"><img src="assets/progetti/image6.jpg" alt="Progetto 6" loading="lazy"></div>
+                        <div class="gallery-item" data-index="6" data-src="assets/progetti/image7.jpg"><img src="assets/progetti/image7.jpg" alt="Progetto 7" loading="lazy"></div>
+                        <div class="gallery-item" data-index="7" data-src="assets/progetti/image8.jpg"><img src="assets/progetti/image8.jpg" alt="Progetto 8" loading="lazy"></div>
+                        <div class="gallery-item" data-index="8" data-src="assets/progetti/image9.jpg"><img src="assets/progetti/image9.jpg" alt="Progetto 9" loading="lazy"></div>
+                        <div class="gallery-item" data-index="9" data-src="assets/progetti/image10.jpg"><img src="assets/progetti/image10.jpg" alt="Progetto 10" loading="lazy"></div>
+                        <div class="gallery-item" data-index="10" data-src="assets/progetti/image11.jpg"><img src="assets/progetti/image11.jpg" alt="Progetto 11" loading="lazy"></div>
+                        <div class="gallery-item" data-index="11" data-src="assets/progetti/image12.jpg"><img src="assets/progetti/image12.jpg" alt="Progetto 12" loading="lazy"></div>
+                        <div class="gallery-item" data-index="12" data-src="assets/progetti/image13.jpg"><img src="assets/progetti/image13.jpg" alt="Progetto 13" loading="lazy"></div>
+                        <div class="gallery-item" data-index="13" data-src="assets/progetti/image14.jpg"><img src="assets/progetti/image14.jpg" alt="Progetto 14" loading="lazy"></div>
+                        <div class="gallery-item" data-index="14" data-src="assets/progetti/image15.jpg"><img src="assets/progetti/image15.jpg" alt="Progetto 15" loading="lazy"></div>
+                        <div class="gallery-item" data-index="15" data-src="assets/progetti/image16.jpg"><img src="assets/progetti/image16.jpg" alt="Progetto 16" loading="lazy"></div>
+                        <div class="gallery-item" data-index="16" data-src="assets/progetti/image17.jpg"><img src="assets/progetti/image17.jpg" alt="Progetto 17" loading="lazy"></div>
+                        <div class="gallery-item" data-index="17" data-src="assets/progetti/image18.jpg"><img src="assets/progetti/image18.jpg" alt="Progetto 18" loading="lazy"></div>
+                        <div class="gallery-item" data-index="18" data-src="assets/progetti/image19.jpg"><img src="assets/progetti/image19.jpg" alt="Progetto 19" loading="lazy"></div>
+                        <div class="gallery-item" data-index="19" data-src="assets/progetti/image20.jpg"><img src="assets/progetti/image20.jpg" alt="Progetto 20" loading="lazy"></div>
+                        <div class="gallery-item" data-index="20" data-src="assets/progetti/image21.jpg"><img src="assets/progetti/image21.jpg" alt="Progetto 21" loading="lazy"></div>
+                        <div class="gallery-item" data-index="21" data-src="assets/progetti/image22.jpg"><img src="assets/progetti/image22.jpg" alt="Progetto 22" loading="lazy"></div>
+                        <div class="gallery-item" data-index="22" data-src="assets/progetti/image23.jpg"><img src="assets/progetti/image23.jpg" alt="Progetto 23" loading="lazy"></div>
+                        <div class="gallery-item" data-index="23" data-src="assets/progetti/image24.jpg"><img src="assets/progetti/image24.jpg" alt="Progetto 24" loading="lazy"></div>
+                        <div class="gallery-item" data-index="24" data-src="assets/progetti/image25.jpg"><img src="assets/progetti/image25.jpg" alt="Progetto 25" loading="lazy"></div>
+                        <div class="gallery-item" data-index="25" data-src="assets/progetti/image26.jpg"><img src="assets/progetti/image26.jpg" alt="Progetto 26" loading="lazy"></div>
+                        <div class="gallery-item" data-index="26" data-src="assets/progetti/image27.jpg"><img src="assets/progetti/image27.jpg" alt="Progetto 27" loading="lazy"></div>
+                        <div class="gallery-item" data-index="27" data-src="assets/progetti/image28.jpg"><img src="assets/progetti/image28.jpg" alt="Progetto 28" loading="lazy"></div>
+                        <div class="gallery-item" data-index="28" data-src="assets/progetti/image29.jpg"><img src="assets/progetti/image29.jpg" alt="Progetto 29" loading="lazy"></div>
+                        <div class="gallery-item" data-index="29" data-src="assets/progetti/image30.jpg"><img src="assets/progetti/image30.jpg" alt="Progetto 30" loading="lazy"></div>
+                        <div class="gallery-item" data-index="30" data-src="assets/progetti/image31.jpg"><img src="assets/progetti/image31.jpg" alt="Progetto 31" loading="lazy"></div>
+                        <div class="gallery-item" data-index="31" data-src="assets/progetti/image32.jpg"><img src="assets/progetti/image32.jpg" alt="Progetto 32" loading="lazy"></div>
+                        <div class="gallery-item" data-index="32" data-src="assets/progetti/image33.jpg"><img src="assets/progetti/image33.jpg" alt="Progetto 33" loading="lazy"></div>
+                        <div class="gallery-item" data-index="33" data-src="assets/progetti/image34.jpg"><img src="assets/progetti/image34.jpg" alt="Progetto 34" loading="lazy"></div>
+                        <div class="gallery-item" data-index="34" data-src="assets/progetti/image35.jpg"><img src="assets/progetti/image35.jpg" alt="Progetto 35" loading="lazy"></div>
+                        <div class="gallery-item" data-index="35" data-src="assets/progetti/image36.jpg"><img src="assets/progetti/image36.jpg" alt="Progetto 36" loading="lazy"></div>
+                        <div class="gallery-item" data-index="36" data-src="assets/progetti/image37.jpg"><img src="assets/progetti/image37.jpg" alt="Progetto 37" loading="lazy"></div>
+                        <div class="gallery-item" data-index="37" data-src="assets/progetti/image38.jpg"><img src="assets/progetti/image38.jpg" alt="Progetto 38" loading="lazy"></div>
+                        <div class="gallery-item" data-index="38" data-src="assets/progetti/image39.jpg"><img src="assets/progetti/image39.jpg" alt="Progetto 39" loading="lazy"></div>
+                        <div class="gallery-item" data-index="39" data-src="assets/progetti/image40.jpg"><img src="assets/progetti/image40.jpg" alt="Progetto 40" loading="lazy"></div>
+                        <div class="gallery-item" data-index="40" data-src="assets/progetti/image41.jpg"><img src="assets/progetti/image41.jpg" alt="Progetto 41" loading="lazy"></div>
+                        <div class="gallery-item" data-index="41" data-src="assets/progetti/image42.jpg"><img src="assets/progetti/image42.jpg" alt="Progetto 42" loading="lazy"></div>
+                        <div class="gallery-item" data-index="42" data-src="assets/progetti/image43.jpg"><img src="assets/progetti/image43.jpg" alt="Progetto 43" loading="lazy"></div>
+                        <div class="gallery-item" data-index="43" data-src="assets/progetti/image44.jpg"><img src="assets/progetti/image44.jpg" alt="Progetto 44" loading="lazy"></div>
+                        <div class="gallery-item" data-index="44" data-src="assets/progetti/image45.jpg"><img src="assets/progetti/image45.jpg" alt="Progetto 45" loading="lazy"></div>
+                        <div class="gallery-item" data-index="45" data-src="assets/progetti/image46.jpg"><img src="assets/progetti/image46.jpg" alt="Progetto 46" loading="lazy"></div>
+                        <div class="gallery-item" data-index="46" data-src="assets/progetti/image47.jpg"><img src="assets/progetti/image47.jpg" alt="Progetto 47" loading="lazy"></div>
+                        <div class="gallery-item" data-index="47" data-src="assets/progetti/image48.jpg"><img src="assets/progetti/image48.jpg" alt="Progetto 48" loading="lazy"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal for Gallery -->
+    <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Chiudi Gallery Modal">&times;</button>
+        <button class="lightbox-prev" id="lightboxPrev" aria-label="Immagine precedente">&#10094;</button>
+        <div class="lightbox-content">
+            <img src="" alt="Lightbox View" id="lightboxImg">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+        <button class="lightbox-next" id="lightboxNext" aria-label="Immagine successiva">&#10095;</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

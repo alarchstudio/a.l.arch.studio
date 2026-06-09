@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow indexing on the form confirmation page
+Disallow: /confermaInvio.html
+
+# XML sitemap coordinate
+Sitemap: https://www.alarchstudio.it/sitemap.xml
