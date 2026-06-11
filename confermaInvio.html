@@ -1,93 +1,96 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon.ico">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+
+    <!-- SEO Meta Tags -->
     <title>Grazie per il tuo messaggio | a.l.arch.studio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
-            transition: all 0.3s ease;
-        }
+    <meta name="description" content="Messaggio inviato con successo a a.l.arch.studio.">
 
-        body {
-            background-color: #000000;
-            color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .success-container {
-            text-align: center;
-            padding: 40px;
-            max-width: 500px;
-        }
-
-        .success-icon {
-            width: 80px;
-            height: 80px;
-            border: 1px solid #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto 35px;
-        }
-
-        .success-icon i {
-            color: #ffffff;
-            font-size: 30px;
-        }
-
-        h1 {
-            font-size: 28px;
-            font-weight: 500;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        p {
-            color: #a0a0a0;
-            margin-bottom: 35px;
-            line-height: 1.8;
-            font-size: 14px;
-        }
-
-        .back-btn {
-            display: inline-block;
-            padding: 14px 40px;
-            background-color: #ffffff;
-            color: #000000;
-            text-decoration: none;
-            border: 1px solid #ffffff;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            cursor: pointer;
-        }
-
-        .back-btn:hover {
-            background-color: #000000;
-            color: #ffffff;
-        }
-    </style>
+    <!-- Google Fonts & Style libraries -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <div class="success-container">
-        <div class="success-icon">
-            <i class="fas fa-check"></i>
-        </div>
-        <h1>Messaggio inviato</h1>
-        <p>Grazie per averci contattato. Riceverai una risposta il prima possibile.<br>Nel frattempo, puoi tornare alla home page.</p>
-        <a href="index.html" class="back-btn">Torna alla Home</a>
+    <!-- Loader -->
+    <div class="loader-container">
+        <div class="loader"></div>
     </div>
+
+    <!-- Sidebar/Left Navigation -->
+    <header class="sidebar-header">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="assets/logo/logo_senza_sfondo.png" alt="a.l.arch.studio Logo" class="logo-img">
+            </a>
+        </div>
+        <!-- Mobile Language Switcher -->
+        <div class="lang-switcher-mobile">
+            <button class="lang-btn active" data-lang="it">IT</button>
+            <span class="lang-separator">/</span>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Apri Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="sidebar-nav" id="sidebarNav">
+            <ul>
+                <li><a href="index.html" class="sidebar-link">HOME</a></li>
+                <li><a href="about.html" class="sidebar-link">ABOUT</a></li>
+                <li><a href="gallery.html" class="sidebar-link">GALLERY</a></li>
+                <li>
+                    <a href="dove-siamo.html" class="sidebar-link">
+                        <span class="lang-it">DOVE SIAMO</span>
+                        <span class="lang-en">FIND US</span>
+                    </a>
+                </li>
+                <li><a href="press.html" class="sidebar-link">PRESS</a></li>
+            </ul>
+        </nav>
+        <!-- Desktop Language Switcher -->
+        <div class="lang-switcher-desktop">
+            <button class="lang-btn active" data-lang="it">IT</button>
+            <span class="lang-separator">/</span>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section success" id="success">
+            <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh; text-align: center; padding: 40px 20px;">
+                <div class="success-icon" style="width: 80px; height: 80px; border: 1px solid #ffffff; display: flex; justify-content: center; align-items: center; margin: 0 auto 35px;">
+                    <i class="fas fa-check" style="color: #ffffff; font-size: 30px;"></i>
+                </div>
+                <h1 class="section-title lang-it" style="margin-bottom: 20px; font-weight: 500; letter-spacing: 2px;">Messaggio inviato</h1>
+                <h1 class="section-title lang-en" style="margin-bottom: 20px; font-weight: 500; letter-spacing: 2px;">Message sent</h1>
+                
+                <p class="lang-it" style="color: #a0a0a0; margin-bottom: 35px; line-height: 1.8; font-size: 14px; max-width: 500px;">Grazie per averci contattato. Riceverai una risposta il prima possibile.<br>Nel frattempo, puoi tornare alla home page.</p>
+                <p class="lang-en" style="color: #a0a0a0; margin-bottom: 35px; line-height: 1.8; font-size: 14px; max-width: 500px;">Thank you for contacting us. You will receive a response as soon as possible.<br>In the meantime, you can return to the home page.</p>
+                
+                <a href="index.html" class="submit-btn lang-it" style="text-decoration: none; display: inline-block;">Torna alla Home</a>
+                <a href="index.html" class="submit-btn lang-en" style="text-decoration: none; display: inline-block;">Return to Home</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
 </body>
+
 </html>

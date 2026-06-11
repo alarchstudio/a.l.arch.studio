@@ -69,6 +69,12 @@
                 <img src="assets/logo/logo_senza_sfondo.png" alt="a.l.arch.studio Logo" class="logo-img">
             </a>
         </div>
+        <!-- Mobile Language Switcher -->
+        <div class="lang-switcher-mobile">
+            <button class="lang-btn active" data-lang="it">IT</button>
+            <span class="lang-separator">/</span>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
         <button class="menu-toggle" id="menuToggle" aria-label="Apri Menu">
             <span></span>
             <span></span>
@@ -79,10 +85,21 @@
                 <li><a href="index.html" class="sidebar-link">HOME</a></li>
                 <li><a href="about.html" class="sidebar-link">ABOUT</a></li>
                 <li><a href="gallery.html" class="sidebar-link active">GALLERY</a></li>
-                <li><a href="dove-siamo.html" class="sidebar-link">DOVE SIAMO</a></li>
+                <li>
+                    <a href="dove-siamo.html" class="sidebar-link">
+                        <span class="lang-it">DOVE SIAMO</span>
+                        <span class="lang-en">FIND US</span>
+                    </a>
+                </li>
                 <li><a href="press.html" class="sidebar-link">PRESS</a></li>
             </ul>
         </nav>
+        <!-- Desktop Language Switcher -->
+        <div class="lang-switcher-desktop">
+            <button class="lang-btn active" data-lang="it">IT</button>
+            <span class="lang-separator">/</span>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
     </header>
 
     <!-- Main Content -->
@@ -92,54 +109,18 @@
                 <h1 class="section-title">GALLERY</h1>
                 
                 <div class="gallery-tabs">
-                    <button class="gallery-tab-btn active" data-tab="direzione-tecnica">Direzione tecnica di grandi opere e project management</button>
-                    <button class="gallery-tab-btn" data-tab="progetti">Progetti</button>
+                    <button class="gallery-tab-btn active" data-tab="progetti">
+                        <span class="lang-it">Progetti</span>
+                        <span class="lang-en">Projects</span>
+                    </button>
+                    <button class="gallery-tab-btn" data-tab="direzione-tecnica">
+                        <span class="lang-it">Direzione tecnica di grandi opere e project management</span>
+                        <span class="lang-en">Technical direction of major works and project management</span>
+                    </button>
                 </div>
 
-                <!-- Tab 1: Direzione Tecnica -->
-                <div class="gallery-tab-content active" id="tab-direzione-tecnica">
-                    <div class="gallery-grid">
-                        <div class="gallery-item" data-index="0" data-src="assets/direzione-tecnica/san_raffaele1.jpg" data-caption="Ospedale San Raffaele">
-                            <img src="assets/direzione-tecnica/san_raffaele1.jpg" alt="Ospedale San Raffaele 1" loading="lazy">
-                            <div class="gallery-item-overlay">
-                                <span>Ospedale San Raffaele</span>
-                            </div>
-                        </div>
-                        <div class="gallery-item" data-index="1" data-src="assets/direzione-tecnica/san_raffaele2.jpg" data-caption="Ospedale San Raffaele">
-                            <img src="assets/direzione-tecnica/san_raffaele2.jpg" alt="Ospedale San Raffaele 2" loading="lazy">
-                            <div class="gallery-item-overlay">
-                                <span>Ospedale San Raffaele</span>
-                            </div>
-                        </div>
-                        <div class="gallery-item" data-index="2" data-src="assets/direzione-tecnica/san_raffaele3.jpg" data-caption="Ospedale San Raffaele">
-                            <img src="assets/direzione-tecnica/san_raffaele3.jpg" alt="Ospedale San Raffaele 3" loading="lazy">
-                            <div class="gallery-item-overlay">
-                                <span>Ospedale San Raffaele</span>
-                            </div>
-                        </div>
-                        <div class="gallery-item" data-index="3" data-src="assets/direzione-tecnica/limbiate1.png" data-caption="Carrefour Limbiate">
-                            <img src="assets/direzione-tecnica/limbiate1.png" alt="Carrefour Limbiate 1" loading="lazy">
-                            <div class="gallery-item-overlay">
-                                <span>Carrefour Limbiate</span>
-                            </div>
-                        </div>
-                        <div class="gallery-item" data-index="4" data-src="assets/direzione-tecnica/limbiate2.png" data-caption="Carrefour Limbiate">
-                            <img src="assets/direzione-tecnica/limbiate2.png" alt="Carrefour Limbiate 2" loading="lazy">
-                            <div class="gallery-item-overlay">
-                                <span>Carrefour Limbiate</span>
-                            </div>
-                        </div>
-                        <div class="gallery-item" data-index="5" data-src="assets/direzione-tecnica/limbiate3.png" data-caption="Carrefour Limbiate">
-                            <img src="assets/direzione-tecnica/limbiate3.png" alt="Carrefour Limbiate 3" loading="lazy">
-                            <div class="gallery-item-overlay">
-                                <span>Carrefour Limbiate</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tab 2: Progetti -->
-                <div class="gallery-tab-content" id="tab-progetti">
+                <!-- Tab 1: Progetti (Swapped & set as active by default) -->
+                <div class="gallery-tab-content active" id="tab-progetti">
                     <div class="gallery-grid">
                         <div class="gallery-item" data-index="0" data-src="assets/progetti/image1.jpg"><img src="assets/progetti/image1.jpg" alt="Progetto 1" loading="lazy"></div>
                         <div class="gallery-item" data-index="1" data-src="assets/progetti/image2.jpg"><img src="assets/progetti/image2.jpg" alt="Progetto 2" loading="lazy"></div>
@@ -188,6 +169,54 @@
                         <div class="gallery-item" data-index="44" data-src="assets/progetti/image45.jpg"><img src="assets/progetti/image45.jpg" alt="Progetto 45" loading="lazy"></div>
                         <div class="gallery-item" data-index="45" data-src="assets/progetti/image46.jpg"><img src="assets/progetti/image46.jpg" alt="Progetto 46" loading="lazy"></div>
                         <div class="gallery-item" data-index="46" data-src="assets/progetti/image47.jpg"><img src="assets/progetti/image47.jpg" alt="Progetto 47" loading="lazy"></div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Direzione Tecnica (Swapped & set as hidden by default) -->
+                <div class="gallery-tab-content" id="tab-direzione-tecnica">
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-index="0" data-src="assets/direzione-tecnica/san_raffaele1.jpg" data-caption-it="Ospedale San Raffaele" data-caption-en="San Raffaele Hospital">
+                            <img src="assets/direzione-tecnica/san_raffaele1.jpg" alt="Ospedale San Raffaele 1" loading="lazy">
+                            <div class="gallery-item-overlay">
+                                <span class="lang-it">Ospedale San Raffaele</span>
+                                <span class="lang-en">San Raffaele Hospital</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-index="1" data-src="assets/direzione-tecnica/san_raffaele2.jpg" data-caption-it="Ospedale San Raffaele" data-caption-en="San Raffaele Hospital">
+                            <img src="assets/direzione-tecnica/san_raffaele2.jpg" alt="Ospedale San Raffaele 2" loading="lazy">
+                            <div class="gallery-item-overlay">
+                                <span class="lang-it">Ospedale San Raffaele</span>
+                                <span class="lang-en">San Raffaele Hospital</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-index="2" data-src="assets/direzione-tecnica/san_raffaele3.jpg" data-caption-it="Ospedale San Raffaele" data-caption-en="San Raffaele Hospital">
+                            <img src="assets/direzione-tecnica/san_raffaele3.jpg" alt="Ospedale San Raffaele 3" loading="lazy">
+                            <div class="gallery-item-overlay">
+                                <span class="lang-it">Ospedale San Raffaele</span>
+                                <span class="lang-en">San Raffaele Hospital</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-index="3" data-src="assets/direzione-tecnica/limbiate1.png" data-caption-it="Carrefour Limbiate" data-caption-en="Carrefour Limbiate">
+                            <img src="assets/direzione-tecnica/limbiate1.png" alt="Carrefour Limbiate 1" loading="lazy">
+                            <div class="gallery-item-overlay">
+                                <span class="lang-it">Carrefour Limbiate</span>
+                                <span class="lang-en">Carrefour Limbiate</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-index="4" data-src="assets/direzione-tecnica/limbiate2.png" data-caption-it="Carrefour Limbiate" data-caption-en="Carrefour Limbiate">
+                            <img src="assets/direzione-tecnica/limbiate2.png" alt="Carrefour Limbiate 2" loading="lazy">
+                            <div class="gallery-item-overlay">
+                                <span class="lang-it">Carrefour Limbiate</span>
+                                <span class="lang-en">Carrefour Limbiate</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-index="5" data-src="assets/direzione-tecnica/limbiate3.png" data-caption-it="Carrefour Limbiate" data-caption-en="Carrefour Limbiate">
+                            <img src="assets/direzione-tecnica/limbiate3.png" alt="Carrefour Limbiate 3" loading="lazy">
+                            <div class="gallery-item-overlay">
+                                <span class="lang-it">Carrefour Limbiate</span>
+                                <span class="lang-en">Carrefour Limbiate</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

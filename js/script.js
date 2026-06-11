@@ -116,9 +116,11 @@ document.addEventListener('DOMContentLoaded', function () {
             const imgEl = currentItem.querySelector('img');
             const src = currentItem.getAttribute('data-src') || (imgEl ? imgEl.src : '');
             
-            // Generate clean caption: read data-caption or default to index
-            const captionText = currentItem.getAttribute('data-caption') || 
-                                `IMMAGINE ${currentImageIndex + 1} DI ${currentGalleryItems.length}`;
+            // Generate clean caption: read translated data-caption or default to index
+            const lang = document.documentElement.getAttribute('lang') || 'it';
+            const captionText = currentItem.getAttribute(`data-caption-${lang}`) || 
+                                currentItem.getAttribute('data-caption') || 
+                                (lang === 'en' ? `IMAGE ${currentImageIndex + 1} OF ${currentGalleryItems.length}` : `IMMAGINE ${currentImageIndex + 1} DI ${currentGalleryItems.length}`);
             
             lightboxImg.style.opacity = '0';
             setTimeout(() => {
@@ -178,6 +180,133 @@ document.addEventListener('DOMContentLoaded', function () {
             } else if (e.key === 'ArrowRight') {
                 nextImage();
             }
+        });
+    }
+
+    // --- SEO Translation Data ---
+    const seoData = {
+        it: {
+            index: {
+                title: "a.l.arch.studio | Annalisa Lamaddalena Architetto",
+                desc: "Studio di architettura specializzato in progettazione architettonica, ristrutturazioni e riqualificazioni. Servizi di project management e consulenze specialistiche a Crema."
+            },
+            about: {
+                title: "About | a.l.arch.studio | Annalisa Lamaddalena Architetto",
+                desc: "Profilo professionale dell'architetto Annalisa Lamaddalena e attività dello studio di architettura a Crema. Grandi opere e progetti di ristrutturazione."
+            },
+            gallery: {
+                title: "Gallery | a.l.arch.studio | Grandi Opere e Progetti",
+                desc: "Galleria fotografica dei progetti e delle grandi opere dirette dall'architetto Annalisa Lamaddalena. San Raffaele Milano, Carrefour Limbiate e interior design."
+            },
+            "dove-siamo": {
+                title: "Dove Siamo | Contatti e Studio | a.l.arch.studio",
+                desc: "Indirizzo, telefono e modulo di contatto dello studio dell'architetto Annalisa Lamaddalena a Crema. Richiedi informazioni o consulenze."
+            },
+            press: {
+                title: "Press & Rassegna Stampa | a.l.arch.studio",
+                desc: "Rassegna stampa dello studio dell'architetto Annalisa Lamaddalena. Leggi l'articolo di Elle Decor sul design degli interni del ristorante Vitium."
+            },
+            "privacy-policy": {
+                title: "Privacy Policy & Termini | a.l.arch.studio",
+                desc: "Informativa sulla privacy, trattamento dei dati personali (GDPR) e condizioni d'uso del sito web dello studio dell'architetto Annalisa Lamaddalena."
+            }
+        },
+        en: {
+            index: {
+                title: "a.l.arch.studio | Annalisa Lamaddalena Architect",
+                desc: "Architecture studio specializing in architectural design, renovations, and redevelopment. Project management services and specialized consulting in Crema."
+            },
+            about: {
+                title: "About | a.l.arch.studio | Annalisa Lamaddalena Architect",
+                desc: "Professional profile of architect Annalisa Lamaddalena and activities of the architecture studio in Crema. Major works and renovation projects."
+            },
+            gallery: {
+                title: "Gallery | a.l.arch.studio | Major Works and Projects",
+                desc: "Photo gallery of projects and major works directed by architect Annalisa Lamaddalena. San Raffaele Milan, Carrefour Limbiate, and interior design."
+            },
+            "dove-siamo": {
+                title: "Find Us | Contacts and Studio | a.l.arch.studio",
+                desc: "Address, phone, and contact form of the studio of architect Annalisa Lamaddalena in Crema. Request information or consultations."
+            },
+            press: {
+                title: "Press & Media Coverage | a.l.arch.studio",
+                desc: "Press review of the studio of architect Annalisa Lamaddalena. Read the Elle Decor article on the interior design of the Vitium restaurant."
+            },
+            "privacy-policy": {
+                title: "Privacy Policy & Terms | a.l.arch.studio",
+                desc: "Privacy policy, personal data processing (GDPR) and terms of use of the website of the studio of architect Annalisa Lamaddalena."
+            }
+        }
+    };
+
+    function updateSEO(lang) {
+        const path = window.location.pathname;
+        let page = 'index';
+        if (path.includes('about')) page = 'about';
+        else if (path.includes('gallery')) page = 'gallery';
+        else if (path.includes('dove-siamo')) page = 'dove-siamo';
+        else if (path.includes('press')) page = 'press';
+        else if (path.includes('privacy-policy')) page = 'privacy-policy';
+
+        if (seoData[lang] && seoData[lang][page]) {
+            document.title = seoData[lang][page].title;
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) {
+                metaDesc.setAttribute('content', seoData[lang][page].desc);
+            }
+        }
+    }
+
+    // --- Language Switcher Logic ---
+    const langBtns = document.querySelectorAll('.lang-btn');
+    const formControls = document.querySelectorAll('.form-control[data-placeholder-it]');
+    
+    function setLanguage(lang) {
+        document.documentElement.setAttribute('lang', lang);
+        localStorage.setItem('preferredLanguage', lang);
+        
+        // Update all switcher buttons active state
+        langBtns.forEach(btn => {
+            if (btn.getAttribute('data-lang') === lang) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+        
+        // Update input placeholders
+        formControls.forEach(input => {
+            const placeholder = input.getAttribute(`data-placeholder-${lang}`);
+            if (placeholder) {
+                input.placeholder = placeholder;
+            }
+        });
+        
+        // Update dynamic captions if we are on gallery page and lightbox is open
+        if (lightboxModal && lightboxModal.classList.contains('active')) {
+            updateLightboxImage();
+        }
+        
+        // Update SEO tags
+        updateSEO(lang);
+    }
+    
+    // Determine initial language
+    let initialLang = localStorage.getItem('preferredLanguage');
+    if (!initialLang) {
+        const browserLang = navigator.language || navigator.userLanguage;
+        initialLang = (browserLang && browserLang.startsWith('en')) ? 'en' : 'it';
+    }
+    setLanguage(initialLang);
+    
+    // Bind click events
+    if (langBtns.length > 0) {
+        langBtns.forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const selectedLang = this.getAttribute('data-lang');
+                setLanguage(selectedLang);
+            });
         });
     }
 });

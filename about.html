@@ -64,6 +64,12 @@
                 <img src="assets/logo/logo_senza_sfondo.png" alt="a.l.arch.studio Logo" class="logo-img">
             </a>
         </div>
+        <!-- Mobile Language Switcher -->
+        <div class="lang-switcher-mobile">
+            <button class="lang-btn active" data-lang="it">IT</button>
+            <span class="lang-separator">/</span>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
         <button class="menu-toggle" id="menuToggle" aria-label="Apri Menu">
             <span></span>
             <span></span>
@@ -74,10 +80,21 @@
                 <li><a href="index.html" class="sidebar-link">HOME</a></li>
                 <li><a href="about.html" class="sidebar-link active">ABOUT</a></li>
                 <li><a href="gallery.html" class="sidebar-link">GALLERY</a></li>
-                <li><a href="dove-siamo.html" class="sidebar-link">DOVE SIAMO</a></li>
+                <li>
+                    <a href="dove-siamo.html" class="sidebar-link">
+                        <span class="lang-it">DOVE SIAMO</span>
+                        <span class="lang-en">FIND US</span>
+                    </a>
+                </li>
                 <li><a href="press.html" class="sidebar-link">PRESS</a></li>
             </ul>
         </nav>
+        <!-- Desktop Language Switcher -->
+        <div class="lang-switcher-desktop">
+            <button class="lang-btn active" data-lang="it">IT</button>
+            <span class="lang-separator">/</span>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
     </header>
 
     <!-- Main Content -->
@@ -97,23 +114,45 @@
                     <!-- Column 2: Text -->
                     <div class="about-text-container">
                         <div class="about-sub-section">
-                            <h3 class="about-section-heading">PROFILO</h3>
-                            <p>Annalisa si laurea in Architettura presso il Politecnico di Bari nel 2002. Dopo le prime esperienze professionali maturate in studi di progettazione della sua città, si trasferisce a Milano, dove dal 2004 intraprende un percorso orientato alla gestione e al coordinamento di opere complesse.</p>
-                            <p>Nel corso della sua attività assume la Direzione Tecnica di importanti interventi, tra cui l'ampliamento del complesso ospedaliero dell'Ospedale San Raffaele di Milano (DIBIT), comprensivo di parcheggio interrato multipiano, la realizzazione della stazione metropolitana di collegamento all'ospedale, un centro commerciale Carrefour a Limbiate (MB) e una residenza universitaria da 170 alloggi per l'Università Vita-Salute San Raffaele.</p>
-                            <p>Collabora con primari General Contractor operanti sul territorio lombardo, occupandosi del coordinamento e della gestione "chiavi in mano" di interventi nei settori della ristorazione, della moda, del commerciale e dell'edilizia residenziale privata.</p>
-                            <p>Parallelamente all'attività di direzione e coordinamento, sviluppa e firma progetti di ristrutturazione e recupero edilizio, dedicando particolare attenzione al contesto architettonico, alla sostenibilità degli interventi, all'ottimizzazione delle risorse economiche e alla valorizzazione del patrimonio esistente. L'approccio progettuale si fonda sulla ricerca di soluzioni equilibrate, capaci di coniugare qualità architettonica, funzionalità, rispetto della storia dei luoghi e controllo dei costi di realizzazione.</p>
+                            <h3 class="about-section-heading">
+                                <span class="lang-it">PROFILO</span>
+                                <span class="lang-en">PROFILE</span>
+                            </h3>
+                            <p class="lang-it">Annalisa si laurea in Architettura presso il Politecnico di Bari nel 2002. Dopo le prime esperienze professionali maturate in studi di progettazione della sua città, si trasferisce a Milano, dove dal 2004 intraprende un percorso orientato alla gestione e al coordinamento di opere complesse.</p>
+                            <p class="lang-en" lang="en">Annalisa graduated in Architecture from the Polytechnic of Bari in 2002. After her first professional experiences in design firms in her city, she moved to Milan, where since 2004 she has undertaken a career oriented towards the management and coordination of complex works.</p>
+                            
+                            <p class="lang-it">Nel corso della sua attività assume la Direzione Tecnica di importanti interventi, tra cui l'ampliamento del complesso ospedaliero dell'Ospedale San Raffaele di Milano (DIBIT), comprensivo di parcheggio interrato multipiano, la realizzazione della stazione metropolitana di collegamento all'ospedale, un centro commerciale Carrefour a Limbiate (MB) e una residenza universitaria da 170 alloggi per l'Università Vita-Salute San Raffaele.</p>
+                            <p class="lang-en" lang="en">During her career she has assumed the Technical Direction of major interventions, including the expansion of the San Raffaele Hospital complex in Milan (DIBIT), including a multi-story underground parking lot, the construction of the metro station connecting to the hospital, a Carrefour shopping center in Limbiate (MB) and a university residence with 170 apartments for the Vita-Salute San Raffaele University.</p>
+                            
+                            <p class="lang-it">Collabora con primari General Contractor operanti sul territorio lombardo, occupandosi del coordinamento e della gestione "chiavi in mano" di interventi nei settori della ristorazione, della moda, del commerciale e dell'edilizia residenziale privata.</p>
+                            <p class="lang-en" lang="en">She collaborates with leading General Contractors operating in the Lombardy region, managing the coordination and 'turnkey' management of interventions in the catering, fashion, commercial, and private residential sectors.</p>
+                            
+                            <p class="lang-it">Parallelamente all'attività di direzione e coordinamento, sviluppa e firma progetti di ristrutturazione e recupero edilizio, dedicando particolare attenzione al contesto architettonico, alla sostenibilità degli interventi, all'ottimizzazione delle risorse economiche e alla valorizzazione del patrimonio esistente. L'approccio progettuale si fonda sulla ricerca di soluzioni equilibrate, capaci di coniugare qualità architettonica, funzionalità, rispetto della storia dei luoghi e controllo dei costi di realizzazione.</p>
+                            <p class="lang-en" lang="en">In parallel with her direction and coordination activities, she develops and signs renovation and building restoration projects, paying particular attention to the architectural context, the sustainability of the interventions, the optimization of economic resources, and the enhancement of the existing heritage. The design approach is based on the search for balanced solutions capable of combining architectural quality, functionality, respect for the history of the places, and control of construction costs.</p>
                         </div>
                         
                         <div class="about-sub-section">
-                            <h3 class="about-section-heading">ATTIVITÀ DELLO STUDIO</h3>
-                            <p>Lo studio offre un servizio integrato di progettazione e gestione dell'intervento, accompagnando il cliente in tutte le fasi del processo edilizio: dall'analisi preliminare e di fattibilità alla progettazione architettonica, dalla gestione delle pratiche autorizzative al coordinamento dei professionisti coinvolti, fino alla direzione lavori e all'ottenimento delle certificazioni finali di agibilità.</p>
-                            <p>Grazie a una consolidata rete di collaboratori specialistici, lo studio è in grado di affrontare ogni aspetto técnico del progetto, garantendo un unico interlocutore e una gestione coordinata dell'intero processo.</p>
+                            <h3 class="about-section-heading">
+                                <span class="lang-it">ATTIVITÀ DELLO STUDIO</span>
+                                <span class="lang-en">STUDIO ACTIVITIES</span>
+                            </h3>
+                            <p class="lang-it">Lo studio offre un servizio integrato di progettazione e gestione dell'intervento, accompagnando il cliente in tutte le fasi del processo edilizio: dall'analisi preliminare e di fattibilità alla progettazione architettonica, dalla gestione delle pratiche autorizzative al coordinamento dei professionisti coinvolti, fino alla direzione lavori e all'ottenimento delle certificazioni finali di agibilità.</p>
+                            <p class="lang-en" lang="en">The studio offers an integrated design and management service, accompanying the client in all phases of the building process: from preliminary and feasibility analysis to architectural design, from the management of regulatory permits to the coordination of the professionals involved, up to construction supervision and obtaining final certificates of usability.</p>
+                            
+                            <p class="lang-it">Grazie a una consolidata rete di collaboratori specialistici, lo studio è in grado di affrontare ogni aspetto técnico del progetto, garantendo un unico interlocutore e una gestione coordinata dell'intero processo.</p>
+                            <p class="lang-en" lang="en">Thanks to a consolidated network of specialized collaborators, the studio is able to address every technical aspect of the project, guaranteeing a single point of contact and coordinated management of the entire process.</p>
                         </div>
                         
                         <div class="about-sub-section">
-                            <h3 class="about-section-heading">CONSULENZE</h3>
-                            <p>Lo studio fornisce consulenze preliminari rivolte a privati, investitori e operatori immobiliari, supportando le decisioni di acquisto attraverso analisi di fattibilità tecnica, urbanistica ed economica.</p>
-                            <p>Le attività di consulenza comprendono inoltre la valutazione dei costi di intervento, l'analisi dei materiali, la definizione delle strategie di realizzazione, il supporto alla scelta delle imprese e il controllo economico delle commesse, con l'obiettivo di fornire al cliente strumenti concreti per assumere decisioni consapevoli e sostenibili.</p>
+                            <h3 class="about-section-heading">
+                                <span class="lang-it">CONSULENZE</span>
+                                <span class="lang-en">CONSULTANCIES</span>
+                            </h3>
+                            <p class="lang-it">Lo studio fornisce consulenze preliminari rivolte a privati, investitori e operatori immobiliari, supportando le decisioni di acquisto attraverso analisi di fattibilità tecnica, urbanistica ed economica.</p>
+                            <p class="lang-en" lang="en">The studio provides preliminary consultations aimed at private individuals, investors, and real estate operators, supporting purchasing decisions through technical, urbanistic, and economic feasibility analyses.</p>
+                            
+                            <p class="lang-it">Le attività di consulenza comprendono inoltre la valutazione dei costi di intervento, l'analisi dei materiali, la definizione delle strategie di realizzazione, il supporto alla scelta delle imprese e il controllo economico delle commesse, con l'obiettivo di fornire al cliente strumenti concreti per assumere decisioni consapevoli e sostenibili.</p>
+                            <p class="lang-en" lang="en">Consulting activities also include the evaluation of intervention costs, material analysis, the definition of implementation strategies, support in choosing contractors, and economic control of orders, with the aim of providing the client with concrete tools to make informed and sustainable decisions.</p>
                         </div>
                     </div>
                 </div>
