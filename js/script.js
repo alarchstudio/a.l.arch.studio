@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             press: {
                 title: "Press & Rassegna Stampa | a.l.arch.studio",
-                desc: "Rassegna stampa dello studio dell'architetto Annalisa Lamaddalena. Leggi l'articolo di Elle Decor sul design degli interni del ristorante Vitium."
+                desc: "Rassegna stampa dello studio dell'architetto Annalisa Lamaddalena: articoli e recensioni su Eventi Culturali Magazine ed Elle Decor."
             },
             "privacy-policy": {
                 title: "Privacy Policy & Termini | a.l.arch.studio",
@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             press: {
                 title: "Press & Media Coverage | a.l.arch.studio",
-                desc: "Press review of the studio of architect Annalisa Lamaddalena. Read the Elle Decor article on the interior design of the Vitium restaurant."
+                desc: "Press review of the studio of architect Annalisa Lamaddalena: articles and media coverage on Eventi Culturali Magazine and Elle Decor."
             },
             "privacy-policy": {
                 title: "Privacy Policy & Terms | a.l.arch.studio",

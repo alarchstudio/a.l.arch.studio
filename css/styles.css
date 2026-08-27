@@ -718,6 +718,19 @@ textarea.form-control {
    ========================================================================== */
 .press-content {
     max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.press-card {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 70px;
+}
+
+.press-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
 .press-badge {
@@ -759,6 +772,14 @@ textarea.form-control {
     line-height: 1.8;
     color: #a0a0a0;
     margin-bottom: 40px;
+    text-align: justify;
+}
+
+.press-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
 }
 
 .press-btn {
@@ -771,14 +792,27 @@ textarea.form-control {
     text-decoration: none;
     border-bottom: 1px solid #ffffff;
     padding-bottom: 5px;
+    transition: opacity 0.3s ease;
 }
 
 .press-btn:hover {
     color: #ffffff;
     border-bottom-color: #ffffff;
+    opacity: 0.75;
 }
 
 @media (max-width: 768px) {
+    .press-content {
+        gap: 50px;
+    }
+    .press-card {
+        padding-bottom: 50px;
+    }
+    .press-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
     .press-card-title {
         font-size: 24px;
     }
