@@ -1184,3 +1184,25 @@ html:not([lang="en"]) .lang-en {
         font-size: 10px;
     }
 }
+/* Masonry a righe: le foto seguono l'ordine dell'HTML riga per riga (attivato da js/script.js) */
+.gallery-grid.masonry-rows {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1px;
+    column-count: auto;
+    column-gap: 20px;
+    row-gap: 0;
+    align-items: start;
+}
+
+@media (max-width: 992px) {
+    .gallery-grid.masonry-rows {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-grid.masonry-rows {
+        grid-template-columns: 1fr;
+    }
+}
