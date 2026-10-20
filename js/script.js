@@ -310,3 +310,37 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+// Masonry a righe per la galleria: mantiene l'aspetto a colonne
+// ma dispone le foto nell'ordine dell'HTML, riga per riga.
+(function () {
+    const grids = document.querySelectorAll('.gallery-grid');
+    if (!grids.length || !window.CSS || !CSS.supports('display', 'grid')) return;
+
+    function layout(grid) {
+        if (!grid.offsetParent) return; // tab nascosta: si ricalcola all'apertura
+        grid.querySelectorAll('.gallery-item').forEach(item => {
+            const h = item.getBoundingClientRect().height;
+            if (h > 0) {
+                const gap = parseFloat(getComputedStyle(item).marginBottom) || 0;
+                item.style.gridRowEnd = 'span ' + Math.ceil(h + gap);
+            }
+        });
+    }
+
+    function layoutAll() { grids.forEach(layout); }
+
+    grids.forEach(grid => {
+        grid.classList.add('masonry-rows');
+        grid.querySelectorAll('img').forEach(img => {
+            if (!img.complete) img.addEventListener('load', () => layout(grid));
+        });
+    });
+
+    layoutAll();
+    window.addEventListener('load', layoutAll);
+    let t;
+    window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(layoutAll, 100); });
+    document.querySelectorAll('.gallery-tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => setTimeout(layoutAll, 50));
+    });
+})();
