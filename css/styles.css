@@ -393,6 +393,23 @@ p {
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.about-video-link {
+    display: block;
+    max-width: 380px;
+    margin-top: 15px;
+    color: #666666;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-video-link:hover {
+    color: #ffffff;
+}
+
 .about-text-container {
     flex: 1.5;
     display: flex;
@@ -788,9 +805,26 @@ textarea.form-control {
     display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
-    margin-bottom: 70px;
+    margin-bottom: 20px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     background-color: #000000;
+    filter: brightness(1.12);
+}
+
+.press-video-link {
+    display: inline-block;
+    margin-bottom: 70px;
+    color: #666666;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.press-video-link:hover {
+    color: #ffffff;
 }
 
 .press-actions {
@@ -825,6 +859,9 @@ textarea.form-control {
     }
     .press-card {
         padding-bottom: 50px;
+    }
+    .press-video-link {
+        margin-bottom: 50px;
     }
     .press-actions {
         flex-direction: column;
