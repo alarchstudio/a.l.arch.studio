@@ -384,6 +384,15 @@ p {
     transform: translate(-5px, -5px);
 }
 
+.about-video {
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 16 / 9;
+    margin-top: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 .about-text-container {
     flex: 1.5;
     display: flex;
@@ -773,6 +782,15 @@ textarea.form-control {
     color: #a0a0a0;
     margin-bottom: 40px;
     text-align: justify;
+}
+
+.press-video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: #000000;
 }
 
 .press-actions {
